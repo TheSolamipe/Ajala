@@ -1,0 +1,217 @@
+.card{
+  //FUNCTIONALITY
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 51rem;
+
+  &__side{
+    background-color: red;
+    color: white;
+    font-size: 3rem;
+    height: 51rem;
+    transition: all 1.2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+
+    &--front{
+      background-color: $color-white;
+
+    }
+    &--back{
+
+      transform: rotateY(-180deg);
+
+      &-1{
+        background-image: linear-gradient(to right bottom, $color-light-yellow, $color-dark-yellow);
+      }
+      &-2{
+        background-image: linear-gradient(to right bottom, $color-light-blue, $color-dark-blue);
+      }
+      &-3{
+        background-image: linear-gradient(to right bottom, $color-light-red, $color-dark-red);
+      }
+    }
+  }
+
+  &:hover &__side--front{
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back{
+    transform: rotateY(0);
+  }
+// FRONT SIDE STYLING
+  &__picture{
+      background-size: cover;
+      height: 23rem;
+      // background-blend-mode: screen;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+
+     &--1{
+       // background-image: url('../../public/images/rio.jpg');
+       background-image: linear-gradient(to right bottom, $color-light-yellow, $color-dark-yellow);
+     }
+     &--2{
+       // background-image: url('../../public/images/rio.jpg');
+       background-image: linear-gradient(to right bottom, $color-light-blue, $color-dark-blue);
+     }
+     &--3{
+       // background-image: url('../../public/images/rio.jpg');
+       background-image: linear-gradient(to right bottom, $color-light-red, $color-dark-red);
+     }
+  }
+
+  &__heading{
+      color: $color-white;
+      text-transform: uppercase;
+
+    &--main{
+      position: absolute;
+      top: 23%;
+      right: 10%;
+      padding:0 2rem;
+
+      &-1{
+        background-image: linear-gradient(to right bottom, rgba($color-light-yellow,.85), rgba($color-dark-yellow, .85) );
+      }
+      &-2{
+        background-image: linear-gradient(to right bottom, rgba($color-light-blue,.85), rgba($color-dark-blue, .85) );
+      }
+      &-3{
+        background-image: linear-gradient(to right bottom, rgba($color-light-red,.85), rgba($color-dark-red, .85) );
+      }
+
+
+    }
+    &--sub{
+      position: absolute;
+      top: 33%;
+      right: 10%;
+      padding:0 2.5rem;
+      text-align: center;
+
+      &-1{
+        background-image: linear-gradient(to right bottom, rgba($color-light-yellow,.85), rgba($color-dark-yellow, .85) );
+      }
+      &-2{
+        background-image: linear-gradient(to right bottom, rgba($color-light-blue,.85), rgba($color-dark-blue, .85) );
+      }
+      &-3{
+        background-image: linear-gradient(to right bottom, rgba($color-light-red,.85), rgba($color-dark-red, .85) );
+      }
+
+    }
+  }
+
+  &__details{
+    padding: 3rem;
+
+    ul{
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li{
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        color: $color-grey;
+
+        &:not(:last-child){
+          border-bottom: 2px solid $color-grey-light-1;
+
+          }
+        }
+      }
+    }
+  // BACK SIDE STYLING
+
+  &__back-content{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-bottom: 6rem;
+
+    &--text{
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      &-1{
+
+      }
+    }
+    &--price{
+      font-size: 6rem;
+      font-weight: lighter;
+      &-1{
+
+      }
+    }
+  }
+
+  // @include respond(tab-port){
+  @media only screen and (max-width: 56.25em),
+         only screen and (hover: none){
+        height: auto;
+        border-radius: .5rem;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &__side{
+          height: auto;
+          position: relative;
+          box-shadow: none;
+
+
+          &--back{
+            transform: rotateY(0);
+            clip-path: polygon(0 15%,100% 0, 100% 100%, 0 100%)
+          }
+        }
+
+        &:hover &__side--front{
+          transform: rotateY(0);
+        }
+
+        &__details{
+          padding: 1rem;
+        }
+        // BACK SIDE STYLING
+
+        &__back-content{
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: translate(0);
+          text-align: center;
+          margin-bottom: 2rem;
+          padding: 7rem 3rem 3rem 3rem;
+
+          &--text{
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            &-1{
+
+            }
+          }
+          &--price{
+            font-size: 6rem;
+            font-weight: lighter;
+            &-1{
+
+            }
+          }
+        }
+  }
+}

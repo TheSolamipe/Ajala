@@ -1,0 +1,39 @@
+.hoteldetail{
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: $color-grey-light-2;
+  border-bottom: $border-line;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+}
+
+.description{
+  background-color: $color-white;
+  flex: 0 0 60%;
+  box-shadow: $shadow-dark2;
+  padding: 3rem;
+  margin-right: 4.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    margin-bottom: 3rem;
+    margin-right: 0;
+  }
+}
+
+.customerReview{
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

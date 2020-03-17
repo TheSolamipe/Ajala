@@ -1,0 +1,33 @@
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  box-sizing: border-box;
+
+
+}
+ /* declaring sass variables and mixins */
+$color-primary: #777;
+
+.Hotels{
+/*  font-family: 'l';*/
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-primary;
+  padding: 3rem;
+  background-image: linear-gradient(to right bottom, $color-light-blue, $color-dark-blue);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+
+
+}
+
+::selection{
+  background-color: $color-light-blue;
+  color: $color-white;
+}

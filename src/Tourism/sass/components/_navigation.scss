@@ -1,0 +1,51 @@
+.nav-primary{
+
+  &__logo{
+    color: black;
+    padding-left: 2rem;
+
+    @include respond(tab-port){
+      color: white;
+      padding-left: 0;
+    }
+  }
+}
+
+.nav-secondary{
+
+  @include respond(tab-port){
+    opacity: 0;
+  }
+  &__bar{
+    list-style: none;
+    &-item{
+      margin-top: 1.5rem;
+      :link, :visited{
+        font-size: $default-font-size;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        padding: 0.8rem 2rem;
+        transition: all .2s;
+        position: relative;
+      }
+      &:hover{
+        transform: translateY(-0.5rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+      }
+
+    }
+    &-btn{
+      margin-top: 0.5rem;
+      margin-right: 2rem;
+      font-weight: 700;
+    }
+
+  }
+}

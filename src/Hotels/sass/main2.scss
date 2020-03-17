@@ -1,0 +1,19 @@
+// import files from the abstracts folder
+@import "../../Tourism/sass/abstracts/variables"; //using the varibales i created in the tourism folder
+@import "abstracts2/mixins2";
+// import files from the base folder
+@import "base2/base2"; // using the base settings i had in the tourism folder
+// import files from the layouts folder
+@import "layouts2/mainlook";
+@import "layouts2/header2";
+@import "layouts2/hoteldetail";
+// import files from the components folder
+@import "components2/usernavigation";
+@import "components2/headg2";
+@import "components2/sidebar2";
+@import "components2/gallery2";
+@import "components2/overview";
+@import "components2/buttons2";
+@import "components2/description2";
+@import "components2/customerReview2";
+@import "components2/callToAction";

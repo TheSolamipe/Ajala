@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset= 'utf-8'>
+    <title>WElcome</title>
+  </head>
+  <body>
+    <div>
+      <h1 class>Hello World!</h1>
+    </div>
+  </body>
+</html>
+
+npm config set ignore-scripts true

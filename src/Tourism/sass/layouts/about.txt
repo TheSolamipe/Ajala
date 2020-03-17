@@ -1,0 +1,1 @@
+I contain the global footer, header and so on, I hold all components together, I work everywhere and on all pages

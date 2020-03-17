@@ -1,0 +1,113 @@
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, .9);
+  z-index: 2000;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+
+  &__content{
+    background-image: linear-gradient(90deg, transparent 0%, transparent 20%, $color-white 20% );
+    position: absolute;
+    width: 80vw;
+    height: 60rem;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+
+    transform: translate(-50%, -50%)scale(.25);
+    opacity: 0;
+    transition: all .4s .2s;
+
+    @include respond(tab-land){
+      width: 95vw;
+    }
+    @include respond(phone){
+      display:flex;
+      background-image: linear-gradient(to right, $color-white, $color-white  );
+    }
+
+    &--img{
+      width: 40rem;
+      height: 30rem;
+      display: block;
+
+      @include respond(tab-port){
+        width: 25rem;
+      }
+    }
+  }
+  &__left{
+    display: table-cell;
+    width: 33.333%;
+    @include respond(tab-port){
+      top: 8rem;
+      margin: 1rem;
+      width: 28%;
+    }
+
+    @include respond(phone){
+      display:none;
+    }
+  }
+
+  &__right{
+    position: absolute;
+    top: 13rem;
+    margin: 2rem;
+    width: 62.667%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.4rem;
+
+    @include respond(tab-port){
+      top: 8rem;
+      margin: 1rem;
+      width: 72%;
+    }
+
+    @include respond(phone){
+      top: 5rem;
+      width: 100%;
+    }
+  }
+
+  // open state of the popup
+
+  &:target{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content{
+    transform: translate(-50%, -50%)scale(1);
+    opacity: 1;
+  }
+
+  &__close{
+    &:link,
+    &:visited{
+      color: $color-grey-dark;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all .2s;
+      line-height: 1;
+    }
+    &:hover{
+      color: $color-dark-blue;
+    }
+  }
+
+}

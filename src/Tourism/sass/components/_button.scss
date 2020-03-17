@@ -1,0 +1,158 @@
+.btn{
+    top: 55%;
+    left: 8%;
+
+    @include respond(tab-port){
+      top: 55%;
+      left: 13%;
+    }
+    @include respond(phone){
+
+      left: 18%;
+    }
+      &_center{
+        left: 40%;
+      }
+      &,&:link, &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 2rem;
+        transition: all .2s;
+        position: relative;
+
+        // change for <button> element
+        border: none;
+        cursor: pointer;
+      }
+      &:hover{
+        transform: translateY(-0.5rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+      }
+      &:active, &:focus{
+        outline: none;
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+      }
+      &--white{
+        background-color: $color-white;
+        color: $color-grey;
+
+        &::after{
+          background-color: $color-white
+        }
+      }
+
+      &--animated{
+        animation: moveInUp 1s ease-out 1s;
+        animation-fill-mode: backwards;
+      }
+      &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s
+      }
+
+      &__card--back{
+
+        font-size: 1.5rem;
+        width: 17rem;
+        height: 5rem;
+        left: 25%;
+
+        @include respond(tab-port){
+          left: 32%;
+          margin-bottom: 1rem;
+        }
+      }
+
+      &-discover{
+        margin-right: 25rem;
+      }
+
+      &-popup{
+        left: 0%;
+      }
+
+}
+
+.btn-text{
+      &:link, &:visited{
+        text-decoration: none;
+        font-size: $default-font-size;
+        color: $color-dark-blue;
+        padding: 0.3rem;
+        display: inline-block;
+        border-bottom: 1px solid $color-dark-blue;
+        transition: all .2s;
+      }
+      &:hover{
+        background-color: $color-dark-blue;
+        color: $color-grey-light-1;
+        transform: translateY(-0.2rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+      }
+      &:active{
+        transform: translateY(0.2rem);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .btn-form{
+          &:link, &:visited{
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            display: inline-block;
+            border-radius: 1.5rem;
+            transition: all .2s;
+            position: relative;
+          }
+          &:hover{
+            transform: translateY(-0.5rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+
+            &::after{
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+          }
+          &:active{
+            transform: translateY(-0.1rem);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+          }
+          &--orange{
+            background-image: linear-gradient(to right bottom, $color-light-yellow, $color-dark-yellow);
+            color: $color-white;
+
+            &::after{
+              background-color: $color-black;
+            }
+          }
+          &--red{
+            background-image: linear-gradient(to right bottom, $color-light-red, $color-dark-blue);
+            color: $color-white;
+
+            &::after{
+              background-color: $color-black;
+            }
+          }
+      }

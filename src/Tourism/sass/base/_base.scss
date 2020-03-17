@@ -1,0 +1,48 @@
+// this is a partial sass file to be imported into the main sass file
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  // this is a base setting of what 1rem is.
+  font-size: 62.5%; //1rem = 10px ; 10/16 = 0.625 = 62.5%;
+
+  @include respond(big-desktop){
+    font-size: 75%; // 1rem = 12px; 12/16= 0.75 = 75%
+  }
+  @include respond(tab-land){
+    font-size: 56.25%; // 1rem = 9px; 9/16= 0.5625 = 56.25%
+  }
+  @include respond(tab-port){
+    font-size: 50%; // 1rem = 8px; 8/16= 0.5 = 50%
+  }
+  @include respond(phone){
+    font-size: 37.5%; //1rem = 6px; 6/16 = 0.375 = 37.5%
+  }
+}
+ /* declaring sass variables and mixins */
+$color-primary: #777;
+
+.Tourism{
+/*  font-family: 'l';*/
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-primary;
+  padding: 3rem;
+  box-sizing: border-box;
+
+  @include respond(tab-port){
+    padding: 0;
+  }
+}
+
+
+::selection{
+  background-color: $color-light-blue;
+  color: $color-white;
+}

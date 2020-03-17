@@ -1,0 +1,28 @@
+*, *::after,*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+$color-primary: #777;
+.Cars{
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: $color-primary;
+  padding: 1rem;
+
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8,[col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+
+}
+.img{
+  width: 200px;
+  height: 200px;
+}

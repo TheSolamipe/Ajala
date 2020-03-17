@@ -1,0 +1,38 @@
+%heading{
+  font-weight: 500;
+  font-family: serif;
+}
+.heading-1{
+  @extend %heading;
+  font-size: 5.2rem;
+}
+.heading-2{
+  @extend %heading;
+  font-size: 4.5rem;
+  font-style: italic;
+  line-height: 1;
+
+  &--light{color: $color-grey-light-1;}
+  &--dark{color: $color-grey-dark;}
+}
+.heading-3{
+  @extend %heading;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.heading-4{
+  @extend %heading;
+  font-size: 1.8rem;
+
+  &--light{color: $color-grey-light-1;}
+  &--dark{color: $color-grey-dark;}
+}
+.text{
+  &-blue{color: $color-light-blue;}
+  &-white{color: #fff;}
+}
+
+.mb-sm{margin-bottom: 2rem;}
+.mb-md{margin-bottom: 3rem;}
+.mb-lg{margin-bottom: 4rem;}
+.mb-hg{margin-bottom: 8rem;}

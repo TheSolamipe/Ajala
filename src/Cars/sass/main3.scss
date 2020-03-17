@@ -1,0 +1,20 @@
+// import files from the abstracts folder
+@import "../../Tourism/sass/abstracts/variables"; //using the varibales i created in the tourism folder
+@import "abstract3/mixins3";
+
+// import files form the base folder
+@import "base3/base3";
+@import "base3/typography3";
+// import files form the Components folder
+@import "components3/carFeature";
+
+// import files form the layout folder
+@import "layouts3/cardealers";
+@import "layouts3/features3";
+@import "layouts3/footer3";
+@import "layouts3/header3";
+@import "layouts3/luxury3";
+@import "layouts3/sidebar3";
+@import "layouts3/storyContent";
+@import "layouts3/storyPictures";
+@import "layouts3/gallery3";

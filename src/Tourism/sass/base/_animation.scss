@@ -1,0 +1,47 @@
+// @import '../abstractS/mixins';
+@keyframes moveInLeft {
+  // @include flow(translateX(-10rem), translateX(1rem), translateX(0));
+  0%{
+    opacity: 0;
+    transform: translateX(-10rem)
+  }
+  90%{
+    opacity: .9;
+    transform: translateX(1rem)
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+};
+@keyframes moveInRight {
+  // @include flow(translateX(10rem), translateX(-1rem), translateX(0));
+  0%{
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  90%{
+    opacity: .9;
+    transform: translateX(-1rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInUp {
+  // @include flow(translateY(10rem), translateY(-1rem), translateY(0));
+  0%{
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  90%{
+    opacity: .9;
+    transform: translateY(-1rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0);
+  }
+}

@@ -1,0 +1,112 @@
+////////////////////////////////////////////////////////////////////////////////////
+// SIDE NAVIGATION
+.sidebar2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.side-nav2{
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+      margin: 0;
+    }
+}
+.side-nav{
+  &__item2{
+    position: relative;
+
+    &:not(:last-child){
+      margin-bottom: .5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      background-image: linear-gradient(to right, $color-light-blue, $color-dark-blue);
+      transform: scaleY(0);
+      transition: transform .2s, width .4s cubic-bezier(1,0,0,1) .2s, background-image .1s;
+    }
+    &:hover::before, &:first-child::before{
+      transform: scaleY(1);
+      width: 100%;
+    }
+    &:active::before{
+      background-image: linear-gradient(to left, $color-light-blue, $color-dark-blue)
+    }
+  }
+
+
+  &__link2{
+    list-style: none;
+    color: white;
+
+    &:link,&:visited{
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+
+      @media only screen and (max-width: $bp-medium) {
+        justify-content: center;
+        padding: 2rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        padding: 1.5rem .5rem;
+      }
+    }
+    &:link:hover{
+      color: $color-black;
+    }
+  }
+
+  &__icon2{
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: currentColor;
+    margin-right: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: .7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  &__text2{
+
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+// LEGAL
+.legal2{
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: $color-grey-light-2;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
+}

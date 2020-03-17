@@ -1,0 +1,11 @@
+.Features3{
+  grid-column: center-start / center-end;
+  grid-row: 2 / 3;
+  margin: 15rem 0;
+
+  display: grid;
+  // grid-template-columns: repeat(3, minmax(min-content,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+  // grid-template-rows: repeat(2, minmax(min-content, 1fr));
+  grid-gap: 6rem;
+}
